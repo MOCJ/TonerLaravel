@@ -29,7 +29,8 @@ class CreateConsumptionsTypes extends Migration {
 	 */
 	public function down()
 	{
-		//
+	//
+		Schema::drop('consumptions_types');
 	}
 
 }

@@ -30,6 +30,7 @@ class CreateModels extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('models');
 	}
 
 }

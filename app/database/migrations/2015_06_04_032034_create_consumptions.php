@@ -33,6 +33,7 @@ class CreateConsumptions extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('consumptions');
 	}
 
 }

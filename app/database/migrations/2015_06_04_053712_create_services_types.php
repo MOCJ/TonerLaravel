@@ -30,6 +30,7 @@ class CreateServicesTypes extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('services_types');
 	}
 
 }

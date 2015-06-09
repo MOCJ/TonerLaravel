@@ -35,6 +35,7 @@ class CreateOffices extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('offices');
 	}
 
 }

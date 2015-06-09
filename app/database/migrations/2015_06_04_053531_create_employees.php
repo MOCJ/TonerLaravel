@@ -37,6 +37,7 @@ class CreateEmployees extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('employees');
 	}
 
 }

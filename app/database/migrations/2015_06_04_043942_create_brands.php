@@ -34,6 +34,7 @@ class CreateBrands extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('brands');
 	}
 
 }

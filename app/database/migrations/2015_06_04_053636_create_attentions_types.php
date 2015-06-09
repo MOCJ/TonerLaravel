@@ -31,6 +31,7 @@ class CreateAttentionsTypes extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('attentions_types');
 	}
 
 }
