@@ -4,18 +4,10 @@ class EmployeesTableSeeder extends Seeder {
 		Employees::create(array(
             'nombres'  => 'Milagros',
             'apellidos'     => 'Mamani',
-            'dni'     => '',
+            'dni'     => '00457661',
             'cargo'     => '1',
-            'telefono'     => '1',
+            'telefono'     => '952636301',
         ));
 
-        Employees::create(array(
-            'PK_Curso'  => 'OF-02-WOR',
-            'CurNombre'     => 'Word',
-            'CurDuracion'     => '1',
-            't_modulo_id'     => '1',
-            'CurOrden'     => '2',            
-        ));
-
-
+       
 ?>
