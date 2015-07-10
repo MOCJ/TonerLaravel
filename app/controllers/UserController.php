@@ -10,7 +10,7 @@ class UserController extends \BaseController {
 	public function index()
 	{
 		//
-		$users = Usuario::all();
+		$users = User::all();
 
 		return View::make('usuarios.index')
 				->with('usuario',$users);
@@ -25,6 +25,7 @@ class UserController extends \BaseController {
 	public function create()
 	{
 		//
+		return View::make('usuarios.create');
 	}
 
 
