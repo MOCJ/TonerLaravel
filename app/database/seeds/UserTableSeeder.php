@@ -9,5 +9,6 @@ class UserTableSeeder extends Seeder {
             
     ));
 
-       
-?>
+    
+ }
+ }   
