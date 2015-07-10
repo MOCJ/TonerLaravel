@@ -10,6 +10,10 @@ class UserController extends \BaseController {
 	public function index()
 	{
 		//
+		$users = Usuario::all();
+
+		return View::make('usuarios.index')
+				->with('usuario',$users);
 	}
 
 
