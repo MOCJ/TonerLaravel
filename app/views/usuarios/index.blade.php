@@ -9,11 +9,11 @@
 
 <nav class="navbar navbar-inverse">
     <div class="navbar-header">
-        <a class="navbar-brand" href="{{ URL::to('usuarios') }}">Users Alert</a>
+        <a class="navbar-brand" href="{{ URL::to('usuarios') }}">alerta de usuario</a>
     </div>
     <ul class="nav navbar-nav">
-        <li><a href="{{ URL::to('usuarios') }}">View All Users</a></li>
-        <li><a href="{{ URL::to('usuarios/crear') }}">Create a User</a>
+        <li><a href="{{ URL::to('usuarios') }}">Ver todos los Usuarios</a></li>
+        <li><a href="{{ URL::to('usuarios/crear') }}">Crear un nuevo Usuario</a>
     </ul>
 </nav>
 
@@ -28,8 +28,8 @@
     <thead>
         <tr>
             <td>ID</td>
-            <td>Name</td>
-            <td>Password</td>
+            <td>Nombre</td>
+            <td>Contraseña</td>
         </tr>
     </thead>
     <tbody>
@@ -49,7 +49,7 @@
                 <a class="btn btn-small btn-success" href="{{ URL::to('usuarios/' . $value->id) }}">Show this User</a>
 
                 <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
-                <a class="btn btn-small btn-info" href="{{ URL::to('usuarios/' . $value->id . '/edit') }}">Edit this user</a>
+                <a class="btn btn-small btn-info" href="{{ URL::to('usuarios/' . $value->id . '/editar') }}">Edit this user</a>
 
             </td>
         </tr>
