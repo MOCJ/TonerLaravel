@@ -37,6 +37,31 @@ class UserController extends \BaseController {
 	public function store()
 	{
 		//
+		$rules = array (
+
+			'usuario' => 'required',
+			'contrasena' => 'required|password',
+
+		);
+
+		  $validator = Validator::make(Input::all(), $rules);
+
+        // process the login
+        if ($validator->fails()) {
+            return Redirect::to('usuarios/crear')
+                ->withErrors($validator)
+                ->withInput(Input::except('contrasena'));
+        } else {
+            // store
+            $usuario = new User;
+            $usuario->nombre  = Input::get('usuario');
+            $usuario->contrasena = Input::get('contrasena');
+            $usuario->save();
+
+            // redirect
+            Session::flash('message', 'Felicitaciones Usted ha creado un Nuevo Usuario!');
+            return Redirect::to('usuarios');
+        }
 	}
 
 
