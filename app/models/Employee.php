@@ -1,5 +1,5 @@
 <?php
-class Consumption extends Eloquent {
+class Employee extends Eloquent {
 
 	protected $table = 'employees'; //people
 	protected $fillable = array('nombres','apellidos','dni','cargo','telefono');
