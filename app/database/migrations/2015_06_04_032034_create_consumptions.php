@@ -20,7 +20,7 @@ class CreateConsumptions extends Migration {
 	       $table->string('descripcion');
 	       $table->date('fecha');
 	        $table->integer('consumptions_types_id')->unsigned();
-	       $table->foreign('consumptions_types_id')->references('id')->on('consumptions');
+	       $table->foreign('consumptions_types_id')->references('id')->on('consumptions_types');
 	       $table->timestamps(); //creamos dos columnas más, que servirán para tener un control de la fecha y la hora de cuándo un registro se inserta o se modifica
 	    });
 	}

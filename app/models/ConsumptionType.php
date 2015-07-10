@@ -3,7 +3,7 @@
 
 class ConsumptionType extends Eloquent {
 
-	protected $table = 'consumption_type'; //people
+	protected $table = 'consumptions_types'; //people
 	protected $fillable = array('descripcion');
 
 	/**
@@ -14,7 +14,7 @@ class ConsumptionType extends Eloquent {
 
 	public function consumption()
 	{
-		return $this->hasMany('Consumption','t_consumption_id');
+		return $this->hasMany('Consumption','consumptions_types_id');
 	}
 
 	

@@ -1,7 +1,7 @@
 <?php
 class Consumption extends Eloquent {
 
-	protected $table = 'consumption'; //people
+	protected $table = 'consumptions'; //people
 	protected $fillable = array('descripcion','fecha','consumption_type_id');
 
 	/**
@@ -10,9 +10,9 @@ class Consumption extends Eloquent {
 	 * @var array
 	 */
 
-	public function consumption_type()
+	public function consumptiontype()
 	{
-		return $this->belongsTo('Consumption_Type','consumption_type_id');
+		return $this->belongsTo('ConsumptionType','consumptions_types_id');
 	}
 
 	
