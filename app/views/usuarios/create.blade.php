@@ -28,12 +28,12 @@
 
     <div class="form-group">
         {{ Form::label('nombre', 'Nombre') }}
-        {{ Form::text('nombre', Input::old('usuario'), array('class' => 'form-control')) }}
+        {{ Form::text('usuario', Input::old('usuario'), array('class' => 'form-control')) }}
     </div>
 
     <div class="form-group">
         {{ Form::label('Contraseña', 'Contraseña') }}
-        {{ Form::password('Contraseña', Input::old('contrasena'), array('class' => 'form-control')) }}
+        {{ Form::password('contrasena', Input::old('contrasena'), array('class' => 'form-control')) }}
     </div>
 
    

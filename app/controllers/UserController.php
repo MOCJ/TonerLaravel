@@ -40,7 +40,7 @@ class UserController extends \BaseController {
 		$rules = array (
 
 			'usuario' => 'required',
-			'contrasena' => 'required|password',
+			'contrasena' => 'required'
 
 		);
 
@@ -54,7 +54,7 @@ class UserController extends \BaseController {
         } else {
             // store
             $usuario = new User;
-            $usuario->nombre  = Input::get('usuario');
+            $usuario->usuario  = Input::get('usuario');
             $usuario->contrasena = Input::get('contrasena');
             $usuario->save();
 
