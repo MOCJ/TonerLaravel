@@ -91,6 +91,13 @@ class UserController extends \BaseController {
 	public function edit($id)
 	{
 		//
+		$users = User::find($id);
+
+        // show the edit form and pass the nerd
+        return View::make('usuarios.edit')
+            ->with('usuarios', $users);
+
+
 	}
 
 
@@ -103,6 +110,34 @@ class UserController extends \BaseController {
 	public function update($id)
 	{
 		//
+
+		 // validate
+        // read more on validation at http://laravel.com/docs/validation
+        $rules = array(
+            'usuario'       => 'required',
+            'contrasena'      => 'required'
+           
+        );
+        $validator = Validator::make(Input::all(), $rules);
+
+        // process the login
+        if ($validator->fails()) {
+            return Redirect::to('usuarios/' . $id . '/editar')
+                ->withErrors($validator)
+                ->withInput(Input::except('contrasena'));
+        } else {
+            // store
+            $usuario = user::find($id);
+            $usuario->usuario       = Input::get('usuario');
+            $usuario->contrasena     = Input::get('contrasena');
+           
+            $usuario->save();
+
+            // redirect
+            Session::flash('message', 'Usuario actualizado satisfactoriamente!');
+            return Redirect::to('usuarios');
+        }
+
 	}
 
 
@@ -115,6 +150,8 @@ class UserController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+
+		
 	}
 
 
