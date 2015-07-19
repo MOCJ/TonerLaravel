@@ -42,6 +42,13 @@
             <!-- we will also add show, edit, and delete buttons -->
             <td>
 
+                
+                {{ Form::open(array('url' => 'usuarios/' . $value->id.'/eliminar', 'method' => 'post')) }}
+                    
+                    {{ Form::submit('Eliminar este usuario', array('class' => 'btn btn-warning')) }}
+                {{ Form::close() }}
+
+
                 <!-- delete the nerd (uses the destroy method DESTROY /nerds/{id} -->
                 <!-- we will add this later since its a little more complicated than the other two buttons -->
 

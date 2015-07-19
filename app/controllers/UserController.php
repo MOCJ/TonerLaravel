@@ -97,10 +97,7 @@ class UserController extends \BaseController {
         return View::make('usuarios.edit')
             ->with('usuarios', $users);
 
-
 	}
-
-
 	/**
 	 * Update the specified resource in storage.
 	 *
@@ -109,9 +106,7 @@ class UserController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
-
-		 // validate
+		// validate
         // read more on validation at http://laravel.com/docs/validation
         $rules = array(
             'usuario'       => 'required',
@@ -124,14 +119,15 @@ class UserController extends \BaseController {
         if ($validator->fails()) {
             return Redirect::to('usuarios/' . $id . '/editar')
                 ->withErrors($validator)
-                ->withInput(Input::except('contrasena'));
+                ->withInput(Input::except('contrasena'))
+                ;
         } else {
             // store
-            $usuario = user::find($id);
-            $usuario->usuario       = Input::get('usuario');
-            $usuario->contrasena     = Input::get('contrasena');
+            $usuarios = user::find($id);
+            $usuarios->usuario       = Input::get('usuario');
+            $usuarios->contrasena     = Input::get('contrasena');
            
-            $usuario->save();
+            $usuarios->save();
 
             // redirect
             Session::flash('message', 'Usuario actualizado satisfactoriamente!');
@@ -150,6 +146,15 @@ class UserController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+
+
+		 // delete
+        $usuarios = User::find($id);
+        $usuarios->delete();
+
+        // redirect
+        Session::flash('message', 'Usuario eliminado correctamente!');
+        return Redirect::to('usuarios');
 
 		
 	}

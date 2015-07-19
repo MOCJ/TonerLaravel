@@ -22,16 +22,17 @@
 <!--if there are creation errors, they will show here -->
 {{ HTML::ul($errors->all()) }}
 
-{{ Form::model($usuarios, array('route' => array('usuarios.update', $usuarios->id), 'method' => 'POST')) }}  
+{{ Form::open(array('url' => 'usuarios/'. $usuarios->id, 'method' => 'post')) }}  
 
 
+   
     <div class="form-group">
-        {{ Form::label('usuario', 'usuario') }}
+        {{ Form::label('usuario', 'Usuario') }}
         {{ Form::text('usuario', null, array('class' => 'form-control')) }}
     </div>
 
     <div class="form-group">
-        {{ Form::label('contrasena', 'contrasena') }}
+        {{ Form::label('contrasena', 'Contrasena') }}
         {{ Form::password('contrasena', null, array('class' => 'form-control')) }}
     </div>
 
