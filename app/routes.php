@@ -19,4 +19,13 @@ Route::post('/usuarios/{id}/eliminar','UserController@destroy'); // Elimina un u
 
 Route::get('/login','UserController@showlogin'); // Mostrar Login
 Route::post('/login','UserController@postlogin'); // Verificar datos
-Route::get('/logout','UserController@logout'); // Verificar datos
+Route::get('/logout','UserController@logout'); // Cerrar sesion
+
+//Rutas privadas para solo usuarios autorizados
+Route::group(['before' => 'user'], function()
+{
+    Route::get('/', 'HomeController@index'); // Vista de inicio
+});
+
+
+
