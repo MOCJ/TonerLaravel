@@ -8,13 +8,26 @@
 */
 
 Route::get('/','HomeController@index');
-Route::get('/usuarios','UserController@index');
-Route::get('/usuarios/crear','UserController@create');
-Route::post('/usuarios','UserController@store');
-Route::get('/usuarios/{id}','UserController@show');
-Route::get('/usuarios/{id}/editar','UserController@edit');
-Route::post('/usuarios/{id}','UserController@update');
-Route::post('/usuarios/{id}/eliminar','UserController@destroy');
+Route::get('/usuarios','UserController@index'); //Muetra todos los usuarios
+Route::get('/usuarios/crear','UserController@create'); // Crea un usuario
+Route::post('/usuarios','UserController@store'); // Guarda nuevo usuario creado
+Route::get('/usuarios/{id}','UserController@show'); // Muestra un usuario especifico {id}
+Route::get('/usuarios/{id}/editar','UserController@edit'); // Edita un usuario especifico {id}
+Route::post('/usuarios/{id}','UserController@update'); // Actualiza un usuario especifico {id}
+Route::post('/usuarios/{id}/eliminar','UserController@destroy'); // Elimina un usuario especifico {id}
+
+
+Route::get('/login','UserController@showlogin'); // Mostrar Login
+Route::post('/login','UserController@postlogin'); // Verificar datos
+Route::get('/logout','UserController@logout'); // Cerrar sesion
+
+//Rutas privadas para solo usuarios autorizados
+Route::group(['before' => 'user'], function()
+{
+    Route::get('/', 'HomeController@index'); // Vista de inicio
+});
+
+
 
 
 
