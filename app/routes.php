@@ -17,19 +17,6 @@ Route::post('/usuarios/{id}','UserController@update'); // Actualiza un usuario e
 Route::post('/usuarios/{id}/eliminar','UserController@destroy'); // Elimina un usuario especifico {id}
 
 
-Route::get('/login','UserController@showlogin'); // Mostrar Login
-Route::post('/login','UserController@postlogin'); // Verificar datos
-Route::get('/logout','UserController@logout'); // Cerrar sesion
-
-//Rutas privadas para solo usuarios autorizados
-Route::group(['before' => 'user'], function()
-{
-    Route::get('/', 'HomeController@index'); // Vista de inicio
-});
-
-
-
-
 
 /* Rutas para login ****  */
 
