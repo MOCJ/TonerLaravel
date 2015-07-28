@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="col-xs-5">
                     {{ Form::label('contrasena', 'Contrasena', ['class'=> 'sr-only']) }}
-                    {{ Form::password('password', ['class'=> 'form-control', 'placeholder' =>' Contrasena']); }}
+                    {{ Form::password('contrasena', ['class'=> 'form-control', 'placeholder' =>' Contrasena']); }}
              </div>
             </div>
 
