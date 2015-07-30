@@ -5,7 +5,7 @@ class UserTableSeeder extends Seeder {
     public function run(){
 		User::create(array(
             'usuario'  => 'mocj',
-            'contrasena'     => Hash::make('123456'),
+            'password'     => Hash::make('123456'),
             
     ));
 

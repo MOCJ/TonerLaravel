@@ -19,7 +19,7 @@ class AuthController extends \BaseController {
 	        return View::make('usuarios.login');
 			
 		}
-		
+
 /*Funcion para verificar datos de usuario*/
 	public function postLogin()
 		{
@@ -27,12 +27,12 @@ class AuthController extends \BaseController {
 				// Obtenemos los datos del formulario
 	        $data = array(
 	            'usuario' => Input::get('usuario'),
-	            'contrasena' => Input::get('contrasena')
+	            'password' => Input::get('password')
 	        );
 
 	        	 
 	        // Verificamos los datos
-	        if (Auth::attempt($data, Input::get('remember'))) // Como segundo parámetro pasámos el checkbox para sabes si queremos recordar la contraseña
+	        if (Auth::attempt($data, Input::get('remember'))) // Como segundo parámetro pasámos el checkbox para sabes si queremos recordar la contraseña -->  
 	        {
 	            // Si nuestros datos son correctos mostramos la página de inicio
 	            return Redirect::to('/');

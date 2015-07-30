@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsers extends Migration {
+class CreateUserTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -22,7 +22,6 @@ class CreateUsers extends Migration {
 	       $table->rememberToken();
 	       $table->timestamps(); //creamos dos columnas más, que servirán para tener un control de la fecha y la hora de cuándo un registro se inserta o se modifica
 	    });
-		
 	}
 
 	/**
@@ -34,6 +33,7 @@ class CreateUsers extends Migration {
 	{
 		//
 		Schema::drop('users');
+
 	}
 
 }
