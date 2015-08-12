@@ -55,7 +55,7 @@ class UserController extends \BaseController {
             // store
             $usuario = new User;
             $usuario->usuario  = Input::get('usuario');
-            $usuario->contrasena = Hash::make(Input::get('password')); 
+            $usuario->password = Hash::make(Input::get('password')); 
             
             $usuario->save();
 
@@ -126,7 +126,7 @@ class UserController extends \BaseController {
             // store
             $usuarios = user::find($id);
             $usuarios->usuario       = Input::get('usuario');
-            $usuarios->contrasena     = Input::get('password');
+            $usuarios->password     = Input::get('password');
            
             $usuarios->save();
 
@@ -160,10 +160,9 @@ class UserController extends \BaseController {
 	}
 
 
-<<<<<<< HEAD
-/*<<<<<<< HEAD*/
 
-/*Funcion para mostrar login*/
+
+/*Funcion para mostrar login
 	public function showLogin()
 		{
 			
@@ -177,7 +176,7 @@ class UserController extends \BaseController {
 	        return View::make('usuarios.login');
 			
 		}
-/*Funcion para verificar datos de usuario*/
+Funcion para verificar datos de usuario
 	public function postLogin()
 		{
 			
@@ -208,12 +207,8 @@ class UserController extends \BaseController {
 				
 		}
 
+*/
 
-
-	
- /* >>>>>>> b07eb64ac0e810bb6bd10cd71434ab9b07aaccd6 */
-=======
->>>>>>> b9979fdf43fa68dbbad00fc1ab2461d24c9fe239
 
 
 }

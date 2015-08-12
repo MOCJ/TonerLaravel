@@ -20,15 +20,14 @@ Route::post('/usuarios/{id}/eliminar','UserController@destroy'); // Elimina un u
 
 /* Rutas para login ****  */
 
-<<<<<<< HEAD
-Route::get('login', 'UserController@showLogin'); /*mostrar login}}*/
-Route::post('login', 'UserController@postLogin'); // Verificar datos
-Route::get('logout', 'UserController@logout'	);	//	Cerrar sesión		
-=======
+
 Route::get('login', 'AuthController@showLogin'); /*mostrar login}}*/
 Route::post('login', 'AuthController@postLogin'); // Verificar datos
+Route::get('logout', 'AuthController@logout'	);	//	Cerrar sesión		
+/*=======
+Route::get('login', 'AuthController@showLogin'); /*mostrar login}}
+Route::post('login', 'AuthController@postLogin'); // Verificar datos
 Route::get('logout', 'AuthController@logout'	);	//	cierra sesion		
->>>>>>> b9979fdf43fa68dbbad00fc1ab2461d24c9fe239
 
 /*Rutas privadas solo para usuarios autentficados*/
 

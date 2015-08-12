@@ -16,7 +16,6 @@
         <li><a href="{{ URL::to('usuarios/crear') }}">Crear un usuario</a>
     </ul>
 </nav>
-
 <h1>Editar {{ $usuarios->usuario }}</h1>
 
 <!--if there are creation errors, they will show here -->
@@ -32,7 +31,7 @@
     </div>
 
     <div class="form-group">
-        {{ Form::label('contrasena', 'Contrasena') }}
+        {{ Form::label('password', 'Password') }}
         {{ Form::password('password', null, array('class' => 'form-control')) }}
     </div>
 
