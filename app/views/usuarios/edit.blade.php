@@ -33,7 +33,7 @@
 
     <div class="form-group">
         {{ Form::label('contrasena', 'Contrasena') }}
-        {{ Form::password('contrasena', null, array('class' => 'form-control')) }}
+        {{ Form::password('password', null, array('class' => 'form-control')) }}
     </div>
 
    

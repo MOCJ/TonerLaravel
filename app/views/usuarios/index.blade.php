@@ -37,7 +37,7 @@
         <tr>
             <td>{{ $value->id }}</td>
             <td>{{ $value->usuario }}</td>
-            <td>{{ $value->contrasena }}</td>
+            <td>{{ $value->password }}</td>
             
             <!-- we will also add show, edit, and delete buttons -->
             <td>

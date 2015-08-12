@@ -160,6 +160,7 @@ class UserController extends \BaseController {
 	}
 
 
+<<<<<<< HEAD
 /*<<<<<<< HEAD*/
 
 /*Funcion para mostrar login*/
@@ -211,6 +212,8 @@ class UserController extends \BaseController {
 
 	
  /* >>>>>>> b07eb64ac0e810bb6bd10cd71434ab9b07aaccd6 */
+=======
+>>>>>>> b9979fdf43fa68dbbad00fc1ab2461d24c9fe239
 
 
 }
