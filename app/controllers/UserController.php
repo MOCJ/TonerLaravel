@@ -55,7 +55,8 @@ class UserController extends \BaseController {
             // store
             $usuario = new User;
             $usuario->usuario  = Input::get('usuario');
-            $usuario->contrasena = Input::get('contrasena');
+            $usuario->contrasena = Hash::make(Input::get('contrasena')); 
+            
             $usuario->save();
 
             // redirect
