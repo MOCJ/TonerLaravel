@@ -33,7 +33,7 @@
 
     <div class="form-group">
         {{ Form::label('Contraseña', 'Contraseña') }}
-        {{ Form::password('contrasena', Input::old('contrasena'), array('class' => 'form-control')) }}
+        {{ Form::password('password', Input::old('contrasena'), array('class' => 'form-control')) }}
     </div>
 
    

@@ -40,7 +40,7 @@ class UserController extends \BaseController {
 		$rules = array (
 
 			'usuario' => 'required',
-			'contrasena' => 'required'
+			'password' => 'required'
 
 		);
 
@@ -50,12 +50,12 @@ class UserController extends \BaseController {
         if ($validator->fails()) {
             return Redirect::to('usuarios/crear')
                 ->withErrors($validator)
-                ->withInput(Input::except('contrasena'));
+                ->withInput(Input::except('password'));
         } else {
             // store
             $usuario = new User;
             $usuario->usuario  = Input::get('usuario');
-            $usuario->contrasena = Hash::make(Input::get('contrasena')); 
+            $usuario->contrasena = Hash::make(Input::get('password')); 
             
             $usuario->save();
 
@@ -111,7 +111,7 @@ class UserController extends \BaseController {
         // read more on validation at http://laravel.com/docs/validation
         $rules = array(
             'usuario'       => 'required',
-            'contrasena'      => 'required'
+            'password'      => 'required'
            
         );
         $validator = Validator::make(Input::all(), $rules);
@@ -120,13 +120,13 @@ class UserController extends \BaseController {
         if ($validator->fails()) {
             return Redirect::to('usuarios/' . $id . '/editar')
                 ->withErrors($validator)
-                ->withInput(Input::except('contrasena'))
+                ->withInput(Input::except('password'))
                 ;
         } else {
             // store
             $usuarios = user::find($id);
             $usuarios->usuario       = Input::get('usuario');
-            $usuarios->contrasena     = Input::get('contrasena');
+            $usuarios->contrasena     = Input::get('password');
            
             $usuarios->save();
 
@@ -147,7 +147,6 @@ class UserController extends \BaseController {
 	public function destroy($id)
 	{
 		//
-
 
 		 // delete
         $usuarios = User::find($id);
@@ -184,7 +183,7 @@ class UserController extends \BaseController {
 				// Obtenemos los datos del formulario
 	        $data = [
 	            'usuario' => Input::get('usuario'),
-	            'contrasena' => Input::get('contrasena')
+	            'password' => Input::get('password')
 	        ];
 	 
 	        // Verificamos los datos

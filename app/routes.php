@@ -22,7 +22,7 @@ Route::post('/usuarios/{id}/eliminar','UserController@destroy'); // Elimina un u
 
 Route::get('login', 'UserController@showLogin'); /*mostrar login}}*/
 Route::post('login', 'UserController@postLogin'); // Verificar datos
-Route::get('logout', 'UserController@logout'	);	//			
+Route::get('logout', 'UserController@logout'	);	//	Cerrar sesión		
 
 /*Rutas privadas solo para usuarios autentficados*/
 
