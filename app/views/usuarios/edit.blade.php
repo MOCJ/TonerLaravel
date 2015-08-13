@@ -33,13 +33,12 @@
     <div class="form-group">
         {{ Form::label('password', 'Password') }}
         {{ Form::password('password', null, array('class' => 'form-control')) }}
-    </div>
-
+    </div> 
    
-
     {{ Form::submit('Editar el Usuario!', array('class' => 'btn btn-primary')) }}
 
 {{ Form::close() }}
+
 
 </div>
 </body>

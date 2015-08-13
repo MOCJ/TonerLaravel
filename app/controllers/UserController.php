@@ -10,10 +10,18 @@ class UserController extends \BaseController {
 	public function index()
 	{
 		//
-		$users = User::all();
+		/*$users = User::all();
 
 		return View::make('usuarios.index')
-				->with('usuario',$users);
+				->with('usuario',$users);*/
+
+
+		$usuario = User::all();
+
+		return View::make('usuarios.index')
+				->with('usuario',$usuario);
+
+
 	}
 
 
@@ -75,11 +83,20 @@ class UserController extends \BaseController {
 	public function show($id)
 	{
 		//
-		  $user = User::find($id);
+		 /* $user = User::find($id);
 
         // show the view and pass the nerd to it
         return View::make('usuarios.show')
-            ->with('usuarios', $user);
+            ->with('usuarios', $user);*/
+
+
+            $usuarios = User::find($id);
+
+        // show the view and pass the nerd to it
+        return View::make('usuarios.show')
+            ->with('usuarios', $usuarios);
+
+
 	}
 
 
@@ -92,11 +109,18 @@ class UserController extends \BaseController {
 	public function edit($id)
 	{
 		//
-		$users = User::find($id);
+		/*$users = User::find($id);
 
         // show the edit form and pass the nerd
         return View::make('usuarios.edit')
-            ->with('usuarios', $users);
+            ->with('usuarios', $users);*/
+
+
+            $usuarios = User::find($id);
+
+        // show the edit form and pass the nerd
+        return View::make('usuarios.edit')
+            ->with('usuarios', $usuarios);
 
 	}
 	/**
@@ -111,7 +135,7 @@ class UserController extends \BaseController {
         // read more on validation at http://laravel.com/docs/validation
         $rules = array(
             'usuario'       => 'required',
-            'password'      => 'required'
+           'password'      => 'required'
            
         );
         $validator = Validator::make(Input::all(), $rules);
@@ -124,9 +148,10 @@ class UserController extends \BaseController {
                 ;
         } else {
             // store
-            $usuarios = user::find($id);
+            $usuarios = User::find($id);
             $usuarios->usuario       = Input::get('usuario');
-            $usuarios->password     = Input::get('password');
+           /* $usuarios->password     = Input::get('password');*/
+
            
             $usuarios->save();
 

@@ -18,7 +18,7 @@ class CreateUsers extends Migration {
 			//definimos los métodos
 	       $table->increments('id'); //tipo de datos autoincrementable llamado id
 	       $table->string('usuario');
-	       $table->string('password');
+	       $table->string('password'); //antes estaba definido como contrasena
 	       $table->rememberToken();
 	       $table->timestamps(); //creamos dos columnas más, que servirán para tener un control de la fecha y la hora de cuándo un registro se inserta o se modifica
 	    });

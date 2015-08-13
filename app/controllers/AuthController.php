@@ -20,6 +20,7 @@ class AuthController extends \BaseController {
 			
 		}
 
+
 /*Funcion para verificar datos de usuario*/
 	public function postLogin()
 		{
@@ -27,8 +28,9 @@ class AuthController extends \BaseController {
 				// Obtenemos los datos del formulario
 	        $data = array(
 	            'usuario' => Input::get('usuario'),
-	            'password' => Input::get('password')
+	            'password' =>Input::get('password')
 	        );
+
 
 	        	 
 	        // Verificamos los datos

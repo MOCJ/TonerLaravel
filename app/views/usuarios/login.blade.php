@@ -24,14 +24,14 @@
  
             <div class="row">
                 <div class="col-xs-5">
-                    {{ Form::label('usuario', 'Usuario', ['class'=> 'sr-only']) }}
+                    {{ Form::label('usuario', 'usuario', ['class'=> 'sr-only']) }}
                     {{ Form::text('usuario', null, ['class'=>'form-control','placeholder' => 'Username', 'autofocus' => '']); }}
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-xs-5">
-                    {{ Form::label('password', 'Password', ['class'=> 'sr-only']) }}
+                    {{ Form::label('password', 'password', ['class'=> 'sr-only']) }}
                     {{ Form::password('password', ['class'=> 'form-control', 'placeholder' =>' password']); }}
              </div>
             </div>
