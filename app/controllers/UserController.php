@@ -150,7 +150,7 @@ class UserController extends \BaseController {
             // store
             $usuarios = User::find($id);
             $usuarios->usuario       = Input::get('usuario');
-           /* $usuarios->password     = Input::get('password');*/
+            $usuarios->password     = Hash::make(Input::get('password'));
 
            
             $usuarios->save();
