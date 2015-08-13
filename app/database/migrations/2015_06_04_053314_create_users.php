@@ -35,5 +35,6 @@ class CreateUsers extends Migration {
 		//
 		Schema::drop('users');
 	}
+	
 
 }
