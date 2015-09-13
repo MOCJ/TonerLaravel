@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Pagina Inicial</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-</head>
-<body>
+@extends('plantilla')
+@section('contenido')
 <div class="container">
 
 <nav class="navbar navbar-inverse">
@@ -17,7 +12,7 @@
     </ul>
 </nav>
 
-<h1>All the Users</h1>
+<h1>Todos los usuarios</h1>
 
 <!-- will be used to show any messages -->
 @if (Session::has('message'))
@@ -65,5 +60,4 @@
 </table>
 
 </div>
-</body>
-</html>
+@stop

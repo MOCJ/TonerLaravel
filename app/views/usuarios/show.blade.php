@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Vista de Un usuario en especifico</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-</head>
-<body>
+@extends('plantilla')
+@section('contenido')
 <div class="container">
 
 <nav class="navbar navbar-inverse">
@@ -28,5 +23,4 @@
     </div>
 
 </div>
-</body>
-</html>
+@stop

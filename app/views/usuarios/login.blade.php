@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Sistema de autenticacion con Laravel 4.2</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    {{ HTML::style('assets/css/signin.css') }}
-</head>
-<body>
+@extends('plantilla')
+@section('contenido')
 
 	<div class="container">
 
@@ -56,5 +49,5 @@
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-</body>
-</html>
+
+@stop

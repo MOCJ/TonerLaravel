@@ -56,7 +56,7 @@ return array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
 			'database'  => 'toner',
-			'username'  => 'panda',
+			'username'  => 'mocj',
 			'password'  => '123456',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',

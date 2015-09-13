@@ -1,12 +1,7 @@
 <!-- app/views/nerds/create.blade.php -->
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Crear un Usuario</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-</head>
-<body>
+@extends('plantilla')
+@section('contenido')
 <div class="container">
 
 <nav class="navbar navbar-inverse">
@@ -43,5 +38,4 @@
 {{ Form::close() }}
 
 </div>
-</body>
-</html>
+@stop
