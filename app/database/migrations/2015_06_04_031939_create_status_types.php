@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOffices extends Migration {
+class CreateStatusTypes extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -13,17 +13,13 @@ class CreateOffices extends Migration {
 	public function up()
 	{
 		//
-		Schema::table('offices', function($table){
+		Schema::table('status_types', function($table){
 	       $table->create(); //creamos la tabla
 			//definimos los métodos
 	       $table->increments('id'); //tipo de datos autoincrementable llamado id
-	       $table->string('nombre');
-	       $table->string('ubicacion');
-	       $table->string('anexo');
-	       
+	       $table->string('descripcion');
 	       $table->timestamps(); //creamos dos columnas más, que servirán para tener un control de la fecha y la hora de cuándo un registro se inserta o se modifica
 	    });
-
 	}
 
 	/**
@@ -33,8 +29,8 @@ class CreateOffices extends Migration {
 	 */
 	public function down()
 	{
-		//
-		Schema::drop('offices');
+	//
+		Schema::drop('status_types');
 	}
 
 }
