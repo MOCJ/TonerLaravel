@@ -1,8 +1,8 @@
-@extends('plantilla')
+@extends('planti')
 @section('contenido')
 <div class="container">
 
-<nav class="navbar navbar-inverse">
+<!--<nav class="navbar navbar-inverse">
     <div class="navbar-header">
         <a class="navbar-brand" href="{{ URL::to('usuarios') }}">Alerta Usuario</a>
     </div>
@@ -10,7 +10,13 @@
         <li><a href="{{ URL::to('usuarios') }}">Ver todos los Usuarios</a></li>
         <li><a href="{{ URL::to('usuarios/crear') }}">Creando un Usuario</a>
     </ul>
-</nav>
+</nav>-->
+<ul class="nav nav-pills">
+      
+    <li role="presentation" ><a href="{{ URL::to('usuarios') }}">Ver todos los Usuarios</a></li>
+    <li role="presentation"><a href="{{ URL::to('usuarios/crear') }}">Crear un nuevo Usuario</a></li>
+      
+</ul>
 
 <h1>Showing {{ $usuarios->usuario }}</h1>
 

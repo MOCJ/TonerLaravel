@@ -1,10 +1,14 @@
 <!-- app/views/nerds/create.blade.php -->
 
-@extends('plantilla')
+@extends('planti')
 @section('contenido')
+
+    
+</style>
+
 <div class="container">
 
-<nav class="navbar navbar-inverse">
+<!--<nav class="navbar navbar-inverse">
     <div class="navbar-header">
         <a class="navbar-brand" href="{{ URL::to('usuarios') }}">Alerta de Usuario</a>
     </div>
@@ -12,9 +16,23 @@
         <li><a href="{{ URL::to('usuarios') }}">Ver todos los usuarios</a></li>
         <li><a href="{{ URL::to('usuarios/crear') }}">Crear un usuario</a>
     </ul>
-</nav>
+</nav>-->
+<ul class="nav nav-pills navbar-right">
+      
+    <li role="presentation" ><a href="{{ URL::to('usuarios') }}">Ver todos los Usuarios</a></li>
+    <li role="presentation"><a href="{{ URL::to('usuarios/crear') }}">Crear un nuevo Usuario</a></li>
+      
+</ul>
+  <ol  class="breadcrumb">
+          <li><a href="{{ URL::to('/') }}">Home</a></li>
+          <li><a href="{{ URL::to('usuarios') }}">Usuarios</a></li>
+          <li class="active">Crear usuario</li>
+    </ol>
+
 
 <h1>Crear un usuario</h1>
+
+ 
 
 <!-- if there are creation errors, they will show here -->
 {{ HTML::ul($errors->all()) }}
@@ -38,4 +56,5 @@
 {{ Form::close() }}
 
 </div>
+
 @stop

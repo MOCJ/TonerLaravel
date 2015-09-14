@@ -1,8 +1,14 @@
-@extends('plantilla')
-@section('contenido')
+<html>
+<head>
+    
+    <title>Control de Toner</title>
+        <!-- Incluimos CSS de Bootstrap y el CSS de la plantilla que usamos con los helpers de Laravel -->
+        {{HTML::style('css/bootstrap.min.css')}}
+        {{HTML::style('css/jumbotron-narrow.css')}}
+</head>
+<body>
 
 	<div class="container">
-
 
 		 {{ Form::open(['url' => 'login', 'autocomplete'=>'off', 'class' => 'form-sigin', 'role' => 'form']) }}
  
@@ -49,5 +55,5 @@
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-
-@stop
+</body>
+</html>
