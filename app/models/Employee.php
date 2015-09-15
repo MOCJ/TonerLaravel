@@ -2,7 +2,7 @@
 class Employee extends Eloquent {
 
 	protected $table = 'employees'; //people
-	protected $fillable = array('nombres','apellidos','dni','cargo','telefono');
+	protected $fillable = array('nombres','apellidos','dni','cargo','telefono','office_id');
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -13,6 +13,7 @@ class Employee extends Eloquent {
 	public function consumptiontype()
 	{
 		/*return $this->belongsTo('ConsumptionType','consumptions_types_id');*/
+		return $this->belongsTo('Office','offices_id');
 	}
 
 	

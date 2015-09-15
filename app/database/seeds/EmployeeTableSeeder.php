@@ -7,6 +7,8 @@ class EmployeeTableSeeder extends Seeder {
             'dni'     => '00457661',
             'cargo'     => '1',
             'telefono'     => '952636301',
+            
+
         ));
 
 
