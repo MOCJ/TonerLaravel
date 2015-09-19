@@ -31,7 +31,19 @@ Route::get('/oficinas/{id}/editar','OfficeController@edit'); // Edita una oficin
 Route::post('/oficinas/{id}','OfficeController@update'); // Actualiza una oficina especifica {id}
 Route::post('/oficinas/{id}/eliminar','OfficeController@destroy'); // Elimina una oficina especifica {id}
 
+/* Rutas para marcas de las impresoras */
 
+Route::get('/','HomeController@index');
+Route::get('/marcas','MarcaController@index'); //Muetra todas las Marcas
+Route::get('/marcas/crear','MarcaController@create'); // Crea una nueva marca
+Route::post('/marcas','MarcaController@store'); // Guarda nueva marca
+
+/* Rutas para modelos de las marcas de las impresoras */
+
+Route::get('/','HomeController@index');
+Route::get('/oficinas','OfficeController@index'); //Muetra todas las oficinas
+Route::get('/oficinas/crear','OfficeController@create'); // Crea una nueva oficina
+Route::post('/oficinas','OfficeController@store'); // Guarda nueva oficina creada
 
 
 /* Rutas para login ****  */

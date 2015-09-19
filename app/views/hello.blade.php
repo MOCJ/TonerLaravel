@@ -71,7 +71,7 @@
 			
 			<ul class="nav nav-pills">
  					<li><a href="{{action ('UserController@index')}}">Usuarios</a></li>
-					<li><a href="#">Oficina</a></li>
+					<li><a href="{{action ('OfficeController@index')}}">Oficina</a></li>
 					
 					<li role="presentation" class="dropdown">
 					   	<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
