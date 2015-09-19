@@ -3,20 +3,10 @@
 @extends('planti')
 @section('contenido')
 
-    
-</style>
 
 <div class="container">
 
-<!--<nav class="navbar navbar-inverse">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="{{ URL::to('usuarios') }}">Alerta de Usuario</a>
-    </div>
-    <ul class="nav navbar-nav">
-        <li><a href="{{ URL::to('usuarios') }}">Ver todos los usuarios</a></li>
-        <li><a href="{{ URL::to('usuarios/crear') }}">Crear un usuario</a>
-    </ul>
-</nav>-->
+
 <ul class="nav nav-pills navbar-right">
       
     <li role="presentation" ><a href="{{ URL::to('usuarios') }}">Ver todos los Usuarios</a></li>

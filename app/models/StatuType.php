@@ -14,7 +14,7 @@ class StatuType extends Eloquent {
 
 	public function statu()
 	{
-		return $this->hasMany('Statu','status_types_id');
+		return $this->hasMany('Statu','statu_type_id');
 	}
 
 	

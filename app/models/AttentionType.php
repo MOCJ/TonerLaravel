@@ -12,9 +12,9 @@ class AttentionType extends Eloquent {
 	 * @var array
 	 */
 
-	public function statu()
+	public function attention()
 	{
-		return $this->hasMany('Attention','attentions_types_id');
+		return $this->hasMany('Attention','attention_type_id');
 	}
 
 	

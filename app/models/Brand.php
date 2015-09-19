@@ -14,7 +14,7 @@ class Brand extends Eloquent {
 
 	public function model()
 	{
-		return $this->hasMany('Model','brands_id');
+		return $this->hasMany('Model','brand_id');
 	}
 
 	

@@ -12,7 +12,7 @@ class Attention extends Eloquent {
 
 	public function attentiontype()
 	{
-		return $this->belongsTo('AttentionType','attentions_types_id');
+		return $this->belongsTo('AttentionType','attention_type_id');
 	}
 
 	

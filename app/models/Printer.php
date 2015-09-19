@@ -12,7 +12,7 @@ class Printer extends Eloquent {
 
 	public function printertype()
 	{
-		return $this->belongsTo('PrinterType','printers_types_id');
+		return $this->belongsTo('PrinterType','printer_type_id');
 	}
 
 	

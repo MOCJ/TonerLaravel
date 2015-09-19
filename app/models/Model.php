@@ -12,7 +12,7 @@ class Model extends Eloquent {
 
 	public function brand()
 	{
-		return $this->belongsTo('Brand','brands_id');
+		return $this->belongsTo('Brand','brand_id');
 	}
 
 	

@@ -12,7 +12,7 @@ class Statu extends Eloquent {
 
 	public function statutype()
 	{
-		return $this->belongsTo('StatuType','status_types_id');
+		return $this->belongsTo('StatuType','statu_type_id');
 	}
 
 	

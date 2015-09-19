@@ -10,10 +10,10 @@ class Employee extends Eloquent {
 	 * @var array
 	 */
 
-	public function consumptiontype()
+	public function office()
 	{
 		/*return $this->belongsTo('ConsumptionType','consumptions_types_id');*/
-		return $this->belongsTo('Office','offices_id');
+		return $this->belongsTo('Office','office_id');
 	}
 
 	

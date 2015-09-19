@@ -22,6 +22,16 @@ Route::post('/usuarios/{id}/eliminar','UserController@destroy'); // Elimina un u
 
 /* Rutas para oficinas ****  */
 
+Route::get('/','HomeController@index');
+Route::get('/oficinas','OfficeController@index'); //Muetra todas las oficinas
+Route::get('/oficinas/crear','OfficeController@create'); // Crea una nueva oficina
+Route::post('/oficinas','OfficeController@store'); // Guarda nueva oficina creada
+Route::get('/oficinas/{id}','OfficeController@show'); // Muestra una oficina especifica {id}
+Route::get('/oficinas/{id}/editar','OfficeController@edit'); // Edita una oficina especifica {id}
+Route::post('/oficinas/{id}','OfficeController@update'); // Actualiza una oficina especifica {id}
+Route::post('/oficinas/{id}/eliminar','OfficeController@destroy'); // Elimina una oficina especifica {id}
+
+
 
 
 /* Rutas para login ****  */

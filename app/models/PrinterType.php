@@ -14,7 +14,7 @@ class PrinterType extends Eloquent {
 
 	public function printer()
 	{
-		return $this->hasMany('Printer','printers_types_id');
+		return $this->hasMany('Printer','printer_type_id');
 	}
 
 	

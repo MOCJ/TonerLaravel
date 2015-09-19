@@ -13,7 +13,7 @@ class Office extends Eloquent {
 	public function employee()
 	{
 		/*return $this->belongsTo('ConsumptionType','consumptions_types_id');*/
-		return $this->hasMany('Employee','offices_id');
+		return $this->hasMany('Employee','office_id');
 	}
 
 	
