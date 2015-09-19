@@ -23,8 +23,8 @@ class CreateEmployees extends Migration {
 	       $table->string('dni');
 	       $table->string('cargo');
 	       $table->string('telefono');
-	       $table->integer('offices_id')->unsigned();
-	       $table->foreign('offices_id')->references('id')->on('offices');
+	       $table->integer('office_id')->unsigned();
+	       $table->foreign('office_id')->references('id')->on('offices');
 	       
 	       $table->timestamps(); //creamos dos columnas más, que servirán para tener un control de la fecha y la hora de cuándo un registro se inserta o se modifica
 	    });
