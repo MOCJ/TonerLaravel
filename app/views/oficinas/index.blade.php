@@ -17,17 +17,17 @@
     <!--********busqueda de usuarios por nombres***********-->
 
     <div class="row">
-      <div class="col-lg-6">
-        
-      </div><!-- /.col-lg-6 -->
-      <div class="col-lg-6">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search name">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button">Buscar</button>
-          </span>
-        </div><!-- /input-group -->
-      </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+          
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+           <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search name">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Buscar</button>
+                </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
     </div><!-- /.row -->
 
     <!--*******************-->
@@ -58,7 +58,7 @@
                 <!--{{Form::open(array('url' => 'oficinas/' . $value->id.'/eliminar','method'=>'post'))}}         
                     {{Form::submit('Eliminar esta oficina',array('class'=>'btn btn-warning'))}}
                 {{Form::close()}}--> 
-                <a class="btn btn-smal btn-warning" href="{{URL::to('oficinas/'.$value->id.'/eliminar')}}">Eliminar Oficina</a>
+                <a class="btn btn-small btn-warning" href="{{URL::to('oficinas/'.$value->id.'/eliminar')}}">Eliminar Oficina</a>
                 <a class="btn btn-small btn-success" href="{{URL::to('oficinas/'.$value->id)}}">Ver oficina</a>
                 <a class="btn btn-small btn-info" href="{{URL::to('oficinas/'.$value->id.'/editar')}}">Editar oficina</a>
             </td> 

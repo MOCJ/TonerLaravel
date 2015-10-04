@@ -21,9 +21,7 @@ class OfficeController extends \BaseController {
 		return View::make('oficinas.index')
 				->with('oficina',$oficina);
 
-
 	}
-
 
 	/**
 	 * Show the form for creating a new resource.
@@ -35,6 +33,7 @@ class OfficeController extends \BaseController {
 		//
 		return View::make('oficinas.create');
 	}
+	
 
 
 

@@ -19,16 +19,19 @@
 			display: flex;
 			flex-direction:column;
 			color: white;
-			height: 90px;
+			height: 80px;
 			
 		}
 		.footer {
-				background: steelblue;
+				background: gray;
 				position: fixed;
 				bottom: 0px;
 				width: 1500px;
 				padding: 0;
-				white-space: normal;
+				font-size: 13px;
+				line-height: 0;
+
+
 		}
 	</style>
 </head>
@@ -36,15 +39,15 @@
 	
 		<div class="welcome">
 			<h4>MUNICIPALIDAD DISTRITAL DE ILABAYA</h4>
-			<h3>Control de Toner de Equipos Inform&aacuteticos</h3>
+			<h4>Control de Toner de Equipos Inform&aacuteticos</h4>
 
 		</div>
 		@yield('contenido')
 		<div class="footer">
 			
-			<h5>Unidad de Tecnologias de la Informacion y Comunicaciones</h5>
+			<p >Unidad de Tecnologias de la Informacion y Comunicaciones</p>
 			<p>&copy; Felina 2015 - Mariella Condori Joaquin</p>
-			<h5>Derechos Reservados</h5>
+			<p>Derechos Reservados</p>
 
 		</div>
 		{{HTML::script('js/bootstrap.min.js')}}

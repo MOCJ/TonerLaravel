@@ -27,16 +27,24 @@
 
    
     <div class="form-group">
-        {{ Form::label('oficina', 'Oficina') }}
-        {{ Form::text('nombre', null, array('class' => 'form-control')) }}
+        <!--{{ Form::label('oficina', 'Oficina') }} 
+        {{ Form::text('nombre', null, array('class' => 'form-control')) }}-->
+        <label>Oficina :</label>
+        <input value="{{$oficinas->nombre}}" type="text" class="form-control">
+
+
     </div>
      <div class="form-group">
-        {{ Form::label('ubicacion', 'Ubicacion') }}
-        {{ Form::text('ubicacion', null, array('class' => 'form-control')) }}
+       <!-- {{ Form::label('ubicacion', 'Ubicacion') }}
+        {{ Form::text('ubicacion', null, array('class' => 'form-control')) }}-->
+        <label>Ubicacion : </label>
+        <input value="{{$oficinas->ubicacion}}" type="text" class="form-control">
     </div>
      <div class="form-group">
-        {{ Form::label('Anexo', 'Anexo') }}
-        {{ Form::text('anexo', null, array('class' => 'form-control')) }}
+        <!--{{ Form::label('Anexo', 'Anexo') }}
+        {{ Form::text('anexo', null, array('class' => 'form-control')) }}-->
+        <label>Anexo : </label>
+        <input value="{{$oficinas->anexo}}" type="text" class="form-control">
     </div>
 
 
