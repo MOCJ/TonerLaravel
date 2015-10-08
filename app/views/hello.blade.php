@@ -50,7 +50,7 @@
 		}
 
 		.footer {
-				background: steelblue;
+				background: gray;
 				position: fixed;
 				bottom: 0px;
 				width: 1500px;
@@ -64,7 +64,7 @@
 	<div class="encabezado">
 		<div class="welcome">
 			<h4>MUNICIPALIDAD DISTRITAL DE ILABAYA</h4>
-			<h3>Control de Toner de Equipos Inform&aacuteticos</h3>
+			<h4>Control de Toner de Equipos Inform&aacuteticos</h4>
 		</div>
 	
 		<div class="header">

@@ -134,8 +134,7 @@ class UserController extends \BaseController {
 		// validate
         // read more on validation at http://laravel.com/docs/validation
         $rules = array(
-            'usuario'       => 'required',
-           'password'      => 'required'
+            'usuario'       => 'required'
            
         );
         $validator = Validator::make(Input::all(), $rules);

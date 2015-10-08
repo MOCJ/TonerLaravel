@@ -55,11 +55,11 @@
             <td>{{ $value->ubicacion}}</td>
             <td>{{ $value->anexo}}</td>
             <td>
-                <!--{{Form::open(array('url' => 'oficinas/' . $value->id.'/eliminar','method'=>'post'))}}         
-                    {{Form::submit('Eliminar esta oficina',array('class'=>'btn btn-warning'))}}
-                {{Form::close()}}--> 
-                <a class="btn btn-small btn-warning" href="{{URL::to('oficinas/'.$value->id.'/eliminar')}}">Eliminar Oficina</a>
-                <a class="btn btn-small btn-success" href="{{URL::to('oficinas/'.$value->id)}}">Ver oficina</a>
+                {{Form::open(array('url' => 'oficinas/' . $value->id.'/eliminar','method'=>'post'))}}         
+                    {{Form::submit('Eliminar',array('class'=>'btn btn-warning'))}}
+                {{Form::close()}}
+                <!--<a class="btn btn-small btn-warning" href="{{URL::to('oficinas/'.$value->id.'/eliminar')}}">Eliminar Oficina</a>-->
+                <a class="btn btn-small btn-success" href="{{URL::to('oficinas/'.$value->id)}}">Ver</a>
                 <a class="btn btn-small btn-info" href="{{URL::to('oficinas/'.$value->id.'/editar')}}">Editar oficina</a>
             </td> 
           </tr> 

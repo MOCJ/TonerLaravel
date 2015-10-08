@@ -138,7 +138,7 @@ class OfficeController extends \BaseController {
 	{
 		// validate
         // read more on validation at http://laravel.com/docs/validation
-        $rules = array(
+       $rules = array(
             'nombre'       => 'required',
            'ubicacion'      => 'required',
            'anexo'      => 'required'
@@ -146,12 +146,16 @@ class OfficeController extends \BaseController {
         );
         $validator = Validator::make(Input::all(), $rules);
 
+
+
         // process the login
-        if ($validator->fails()) {
+        if ($validator->fails()) 
+        {
             return Redirect::to('oficinas/' . $id . '/editar')
-                ->withErrors($validator);
-                /*->withInput(Input::except('password'));*/
-        } else {
+                ->withErrors($validator); 
+        } 
+        else
+        {
             // store
             $oficinas = Office::find($id);
             $oficinas->nombre       = Input::get('nombre');
@@ -164,8 +168,10 @@ class OfficeController extends \BaseController {
             // redirect
             Session::flash('message', 'Oficina actualizada satisfactoriamente!');
             return Redirect::to('oficinas');
-        }
+        } 
 
+        
+		     
 	}
 
 
