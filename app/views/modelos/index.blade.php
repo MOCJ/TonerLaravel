@@ -1,16 +1,20 @@
 @extends('planti')
 @section('contenido')
 
+  
+
 <div class="container">
 
         <ul class="nav nav-pills navbar-right">
-          <li role="presentation" ><a href="{{ URL::to('usuarios') }}">Ver todas los modelos</a></li>
-          <li role="presentation"><a href="{{ URL::to('usuarios/crear') }}">Crear un nuevo modelo</a></li>
+          <li role="presentation" ><a href="{{ URL::to('/modelos') }}">Ver todas los modelos</a></li>
+          <li role="presentation"><a href="{{ URL::to('/modelos/crear/'.$marca->id) }}">Crear un nuevo modelo</a></li><!--Atrapar el ID de la marca desde el controlador pasado-->
+
         </ul>
 
         <ol  class="breadcrumb">
           <li><a href="{{ URL::to('/') }}">Home</a></li>
-          <li class="active">Modelo</li>
+          <li><a href="{{ URL::to('/marcas') }}">Marcas</a></li>
+          <li class="active">Modelos</li>
         </ol>
 
     <!--********busqueda de modelos por nombres***********-->
@@ -31,40 +35,34 @@
 
     <!--*******************-->
 
-    <h1>Todos las marcas</h1>
+   <!-- <h1>Todos los modelos de la impresora </h1>-->
 
     <!-- will be used to show any messages -->
     @if (Session::has('message'))
         <div class="alert alert-info">{{ Session::get('message') }}</div>
     @endif
 
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
                 <td>ID</td>
-                <td>Marca</td>
                 <td>Modelo</td>
+                
             </tr>
         </thead>
         <tbody>
-        @foreach($marca as $value)
+
+         @foreach($modelos as $value)
             <tr>
+
                 <td>{{ $value->id }}</td>
-                <td>{{ $value->marca }}</td>
-                <td>{{ $value->modelo }}</td> <!--Es clave foranea -->
-                
-                <!-- we will also add show, edit, and delete buttons -->
+                <td>{{ $value->descripcion }}</td> 
+               <!-- <td>{{ $value->brand_id }}</td>--><!--Es clave foranea -->
                 <td>
-
-                    
-                    {{ Form::open(array('url' => 'marcas/' . $value->id.'/eliminar', 'method' => 'post')) }}
-                        
-                        {{ Form::submit('Eliminar marca', array('class' => 'btn btn-warning')) }}
+                    {{ Form::open(array('url' => 'modelos/' . $value->id.'/eliminar', 'method' => 'post')) }}
+                       {{ Form::submit('Eliminar modelo', array('class' => 'btn btn-warning')) }}
                     {{ Form::close() }}
-
-                    <!--<a class="btn btn-small btn-success" href="{{ URL::to('marcas/' . $value->id) }}">Ver Marca</a>-->
-					<a class="btn btn-small btn-info" href="{{ URL::to('marcas/' . $value->id . '/editar') }}">Editar Marca</a>
-
+				      	    <a class="btn btn-small btn-info" href="{{ URL::to('modelos/' . $value->id . '/editar') }}">Editar modelo</a>
                 </td>
             </tr>
         @endforeach

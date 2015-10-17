@@ -11,7 +11,7 @@
 </ul>
   <ol  class="breadcrumb">
           <li><a href="{{ URL::to('/') }}">Home</a></li>
-          <li><a href="{{ URL::to('usuarios') }}">Marca</a></li>
+          <li><a href="{{ URL::to('marcas') }}">Marca</a></li>
           <li class="active">Editar Marca</li>
     </ol>
 
@@ -22,20 +22,16 @@
 <!--if there are creation errors, they will show here -->
 {{ HTML::ul($errors->all()) }}
 
-{{ Form::open(array('url' => 'marcas/'. $marcas->id, 'method' => 'post')) }}  
+{{ Form::open(array('url' => 'marcas/'. $marcas->id.'/editar', 'method' => 'post')) }}  
 
 
    
     <div class="form-group">
-        {{ Form::label('marca', 'Marca') }}
-        {{ Form::text('marca', null, array('class' => 'form-control')) }}
+        <label>Marca: </label>
+        {{ Form::text('descripcion', $marcas->descripcion, array('class' => 'form-control')) }}
     </div>
 
-    <div class="form-group">
-        {{ Form::label('modelo', 'Modelo') }}  <!--Clave foranea desde ModelsTable -->
-        {{ Form::text('modelo', null, array('class' => 'form-control')) }}
-    </div> 
-   
+  
     {{ Form::submit('Editar la Marca!', array('class' => 'btn btn-primary')) }}
 
 {{ Form::close() }}

@@ -37,7 +37,7 @@
         <div class="alert alert-info">{{ Session::get('message') }}</div>
     @endif
 
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
                 <td>ID</td>
@@ -50,9 +50,12 @@
                 <td>{{ $value->id }}</td>
                 <td>{{ $value->descripcion }}</td>
                 <td>
-					         <a class="btn btn-small btn-success" href="#">Ver Modelos</a>
-                   <a class="btn btn-small btn-info" href="{{ URL::to('marcas/' . $value->id . '/editar') }}">Editar Marca</a>
-                   <a class="btn btn-small btn-warning" href="{{ URL::to('marcas/' . $value->id . '/eliminar') }}">Eliminar Marca</a>
+				   <a class="btn btn-small btn-success"   href="{{URL::to('marcas/'.$value->id.'/modelos')}}">Ver Modelos</a>
+                   <a class="btn btn-small btn-info" href="{{ URL::to('marcas/' . $value->id . '/editar') }}">Editar</a>
+                   {{Form::open(array('url'=>'marcas/'.$value->id.'/eliminar','method'=>'post'))}}
+                        {{Form::submit('Eliminar',array('class'=>'btn btn-warning'))}}
+                   {{Form::close()}}
+                   
                 </td>
             </tr>
         @endforeach

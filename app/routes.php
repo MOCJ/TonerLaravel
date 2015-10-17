@@ -37,14 +37,20 @@ Route::get('/','HomeController@index');
 Route::get('/marcas','BrandController@index'); //Muetra todas las Marcas
 Route::get('/marcas/crear','BrandController@create'); // Crea una nueva marca
 Route::post('/marcas','BrandController@store'); // Guarda nueva marca
+Route::get('/marcas/{id}/editar','BrandController@edit'); // Edita una marca especifica {id}
+Route::post('/marcas/{id}/editar','BrandController@update'); // Actualiza una marca especifica {id}
+Route::post('/marcas/{id}/eliminar','BrandController@destroy'); //Eliminar una marca especifica
+Route::get('/marcas/{id}/modelos','BrandController@vermodelos'); //Muetra todas las Marcas
 
 /* Rutas para modelos de las marcas de las impresoras */
 
 Route::get('/','HomeController@index');
 Route::get('/modelos','ModelController@index'); //Muetra todas las oficinas
-Route::get('/modelos/crear','ModelController@create'); // Crea una nueva oficina
-Route::post('/modelos','ModelController@store'); // Guarda nueva oficina creada
-
+Route::get('/modelos/crear/{id}','ModelController@create'); // Crea una nueva oficina
+Route::post('/modelos/crear/{id}','ModelController@store'); // Guarda nueva oficina creada
+Route::get('/modelos/{id}/editar','ModelController@edit'); // Edita una marca especifica {id}
+Route::post('/modelos/{id}/editar','ModelController@update'); // Actualiza una marca especifica {id}
+Route::post('/modelos/{id}/eliminar','ModelController@destroy'); //Eliminar una marca especifica
 
 /* Rutas para login ****  */
 

@@ -29,6 +29,8 @@
 
 {{ Form::open(array('url' => 'usuarios')) }}
 
+
+
     <div class="form-group">
         {{ Form::label('nombre', 'Nombre') }}
         {{ Form::text('usuario', Input::old('usuario'), array('class' => 'form-control')) }}
