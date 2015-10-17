@@ -111,8 +111,10 @@ class ModelController extends BaseController{
 			$modelos->descripcion=Input::get('descripcion');
 			$modelos->save();
 
+			$marcas=Brand::find($modelos->brand_id);
+
 			Session::flash('message','Modelo Actualizado');
-			return Redirect::to('/marcas');
+			return Redirect::to('/marcas/'.$modelos->brand_id.'/modelos');
 			
 		}
 	}
@@ -130,8 +132,9 @@ class ModelController extends BaseController{
 		$modelos=Model::find($id);
 		$modelos->delete();
 
+
 		Session::flash('message','Modelo eliminado');
-		return Redirect::to('marcas');
+		return Redirect::to('/marcas/'.$modelos->brand_id.'/modelos');
 
 	}
 
