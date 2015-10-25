@@ -4,8 +4,8 @@
 <div class="container">
 
         <ul class="nav nav-pills navbar-right">
-          <li role="presentation" ><a href="{{ URL::to('marcas') }}">Ver todas las impresoras</a></li>
-          <li role="presentation"><a href="{{ URL::to('marcas/crear') }}">Crear un nueva impresora</a></li>
+          <li role="presentation" ><a href="{{ URL::to('/impresoras') }}">Ver todas las impresoras</a></li>
+          <li role="presentation"><a href="{{ URL::to('impresoras/crear') }}">Crear una nueva impresora</a></li> 
         </ul>
 
         <ol  class="breadcrumb">

@@ -72,15 +72,14 @@
 			<ul class="nav nav-pills">
  					<li><a href="{{action ('UserController@index')}}">Usuarios</a></li>
 					<li><a href="{{action ('OfficeController@index')}}">Oficina</a></li>
-					
+					<li><a href="{{action ('PrinterController@index')}}">Equipos</a></li> 
 					<li role="presentation" class="dropdown">
 					   	<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-					      Equipos <span class="caret"></span></a>
+					      Consultas <span class="caret"></span></a>
 					    <ul class="dropdown-menu">
 					      ...
 					    </ul>
 					 </li>
-					<li><a href="#">Consultas</a></li> 
 					 <li><a href="#">Ayuda</a></li>
 
 				</ul>

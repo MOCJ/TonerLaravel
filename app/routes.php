@@ -52,6 +52,12 @@ Route::get('/modelos/{id}/editar','ModelController@edit'); // Edita una marca es
 Route::post('/modelos/{id}/editar','ModelController@update'); // Actualiza una marca especifica {id}
 Route::post('/modelos/{id}/eliminar','ModelController@destroy'); //Eliminar una marca especifica
 
+/* Rutas para las impresoras */
+
+Route::get('/','HomeController@index');
+Route::get('/impresoras','PrinterController@index'); //Muetra todas las oficinas
+Route::get('/impresoras/crear','PrinterController@create'); // Crea una nueva oficina
+
 /* Rutas para login ****  */
 
 
