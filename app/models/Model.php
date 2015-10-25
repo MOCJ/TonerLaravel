@@ -15,6 +15,11 @@ class Model extends Eloquent {
 		return $this->belongsTo('Brand','brand_id');
 	}
 
+	public function printer()
+	{
+		return $this->hasMany('Printer','model_id');
+	}
+
 	
 }
 

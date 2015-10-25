@@ -15,6 +15,16 @@ class Printer extends Eloquent {
 		return $this->belongsTo('PrinterType','printer_type_id');
 	}
 
+	public function office()
+	{
+		return $this->belongsTo('Office','office_id');
+	}
+
+	public function model()
+	{
+		return $this->belongsTo('Model','model_id');
+
+	}
 	
 }
 

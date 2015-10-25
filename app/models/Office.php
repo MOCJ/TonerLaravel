@@ -16,6 +16,13 @@ class Office extends Eloquent {
 		return $this->hasMany('Employee','office_id');
 	}
 
+	public function printer()
+	{
+		return $this->hasMany('Printer','office_id');
+	}
+
+
+
 	
 }
 
